@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+
+* {
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+}
+
+html, body {
+  width: 100vw;
+  height: 100vh;
+
+  max-width: 100%;
+  max-height: 100%;
+}
+
+body {
+  background: #191a1f;
+  color: #fff;
+
+  font-family: 'Play', sans-serif;
+  text-align: center;
+
+  margin: 0px;
+  padding: 0px;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.game-left, .game-rigth {
+  width: 100%;
+  max-width: 150px;
+}
+
+@media (max-width: 800px) {
+  .container {
+    height: 80%;
+  }
+}
+
+@media (max-width: 680px) {
+  .container {
+    height: 50%;
+  }
+}
+
+@media (max-width: 550px) {
+  .game-left, .game-rigth {
+    width: 100%;
+    max-width: 90px;
+  }
+}
+
+@media (max-width: 420px) {
+  .container {
+    height: 40%;
+  }
+}
+
+h1 {
+  padding: 10px;
+
+  font-size: 2rem;
+
+  background: linear-gradient(90deg, rgba(135,67,204,1) 0%, rgba(164,115,213,1) 24%, rgba(114,218,241,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.game {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  padding-bottom: 10px;
+}
+
+.content-infos {
+  width: calc(100% - 10px);
+
+  margin: 0px 5px;
+
+  background: linear-gradient(90deg,#8743cc,#a473d5 24%,#72daf1);
+  box-shadow: 0px 9px 18px 0px rgba(0,0,0,0.8);
+
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.content-infos p {
+  font-size: 14px;
+
+  padding: 5px;
+}
+
+.content-infos div {
+  border-radius: 5px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #191a1f;
+
+  aspect-ratio: 1 / 1;
+  width: 100%;
+}
+
+.content-infos div canvas {
+  max-height: 100%;
+  border-radius: 5px;
+}
+
+.hold-piece {
+  margin-top: 10px;
+}
+
+#tetris {
+  background: linear-gradient(white, white) padding-box,
+    linear-gradient(90deg,#8743cc,#a473d5 24%,#72daf1) border-box;
+
+  box-shadow: 0px 9px 18px 0px rgba(0,0,0,0.8);
+
+  border-radius: 5px;
+  border: 5px solid transparent;
+
+  height: 100%;
+}
+
+.content-tetris {
+  position: relative;
+  height: 100%;
+}
+
+.content-tetris div {
+  position: absolute;
+
+  top: 0px;
+  left: 0px;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0,0,0,0.8);
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-tetris div p {
+  font-size: 2rem;
+}
+
+.content-button {
+  margin: 10px;
+}
+
+.button-start, .button-pause {
+  font-family: 'Play', sans-serif;
+  font-weight: bold;
+  
+  color: #fff;
+
+  background:linear-gradient(90deg,#8743cc,#a473d5 24%,#72daf1);
+  box-shadow: 0px 9px 18px 0px rgba(0,0,0,0.8);
+
+  border: none;
+  border-radius: 5px;
+
+  padding: 10px 0px;
+
+  width: 100%;
+
+  transition: 0.3s;
+}
+
+.button-pause {
+  margin-top: 10px;
+}
+
+.button-start:hover, .button-pause:hover {
+  opacity: 0.8;
+}
+
+.button-start:disabled, .button-pause:disabled {
+  background: #8f9ba8;
+  box-shadow: none;
+}
